@@ -1,0 +1,184 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Gedsa
+</name>
+</assembly>
+<members>
+<member name="M:Gedsa.Entidades.ClsLote.#ctor(System.String,System.String,System.String,System.String)">
+	<summary>
+ Constructor del objeto lote
+ </summary>
+	<param name="lote">nombre del lote, lote1 , lote2, lote3</param>
+	<param name="codigoproyecto ">Identifica al proyecto al que pertenece el lote </param>
+	<param name="tipoLote">Identifica el tipo del lote esto es util en algunos proyectos para saber que comportamiento tiene el lote</param>
+	<param name="fechalote">es util para diferenciar los lotes dentro de un mism proyecto en años diferentes</param>
+	<remarks> 
+se crea un lote con el codigo del proyecto 
+ </remarks>
+</member><member name="M:Gedsa.Entidades.ClsLote.insercionDocumento(System.String,System.Int32,System.Int32,System.Int32@)">
+	<summary>
+ Este metodo inserta un documento en un lote expecificado
+ </summary>
+	<param name="proyecto"></param>
+	<param name="lote"></param>
+	<remarks></remarks>
+</member><member name="M:Gedsa.Entidades.ClsLote.eliminacionDocumento(System.String,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Eliminacion de un documento, unicamente mediante su Identificador
+ </summary>
+	<param name="proyecto"></param>
+	<param name="lote"></param>
+	<remarks></remarks>
+</member><member name="M:Gedsa.Entidades.ClsLote.obtenerDocumentos(System.String,System.Int32,System.Int32,System.String,System.Boolean,System.String,System.String,System.String)">
+	<summary>
+ Obtencion de los documentos de un lote
+ </summary>
+	<param name="proyecto"></param>
+	<param name="fecha"></param>
+	<remarks></remarks>
+</member><member name="T:Gedsa.Controles.Botones.ctrlBotonBase">
+	<summary>
+ Esta es la clase base de los controles de tipo boton, de ella heredan todos los
+ controles de este mismo tipo o de funcionalidad similar.
+ Si el control heredado se crea dinámicamente (en ejecución), es necesario
+ definir sus nuevos atributos en el constructor.
+ </summary>
+	<remarks></remarks>
+</member><member name="P:Gedsa.My.Resources.Resources.ResourceManager">
+	<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member><member name="P:Gedsa.My.Resources.Resources.Culture">
+	<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso con establecimiento inflexible de tipos.
+</summary>
+</member><member name="T:Gedsa.My.Resources.Resources">
+	<summary>
+  Clase de recurso con establecimiento inflexible de tipos, para buscar cadenas traducidas, etc.
+</summary>
+</member><member name="M:Gedsa.Datos.Propietaria.GeneralOracle.ClsAccesoDatosPropOracle.consultaDatatable(System.String,System.String)">
+	<summary>
+ Nos devuelve la datatable resultante de una consulta, en el caso de no encontrar registro o dar errores
+ nos devuelve nothing
+ </summary>
+	<param name="sql"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Gedsa.Datos.Propietaria.GeneralOracle.ClsAccesoDatosPropOracle.obtenerValor(System.String,System.String,System.String,System.String)">
+	<summary>
+ Funcion para obtener un solo valor de un select, si se rellena el where se aplica la condición
+ </summary>
+	<param name="cadenaConexion"></param>
+	<param name="tabla"></param>
+	<param name="campo"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Gedsa.FuncionesGlobales.Carpetas.clsCarpetas.obtenerListaDeArchivosEnUnaCarpeta(System.String,System.String)">
+	<summary>
+ Este metodo devuelve un array de strings. El array esta compuesto por las rutas
+ completas de los archivos que coinciden con el filtro en la ruta especificada y en 
+ sus subcarpetas.
+ </summary>
+	<param name="ruta">
+ La ruta de la carpeta que queremos analizar( se analizaran subdirectorios tambien )
+ </param>            ''' 
+ <param name="filtro">
+ Filtro a aplicar en la busqueda, debe ser del tipo: *.mdb, *.doc, *.exe .... y buscara todos
+ los archivos con esa estension. Tambien se puede buecar el nombre de un archivo (sin testear)
+ de manera de "prueba.c" 
+ </param>
+</member><member name="M:Gedsa.Datos.Produccion.clsAccesoDatosProduccion.CargarListadoProyectos(System.String,System.String)">
+	<summary> 
+Carga el listado de los proyectos, carga el listado de los proyectos con sus correspondientes configuraciones
+</summary>
+	<param name=" codigoCliente ">indica el cliente para el que se obtienen los proyectos</param>
+	<returns>Devuelve una datatable con todos los posibles proyectos </returns>
+</member><member name="M:Gedsa.Datos.Produccion.clsAccesoDatosProduccion.ObtenerContraseñaProyecto(System.String,System.String)">
+	<summary> 
+devueve la clave para un proyecto 
+</summary>
+	<param name="proyecto ">Proyecto para el que se quiere obtener la contraseña </param>
+	<returns>contraseña para el codigoproyecto seleccionado </returns>
+	<remarks> 
+mas comentarios 
+ </remarks>
+</member><member name="M:Gedsa.Configuracion.clsConfiguracion.#ctor(System.String)">
+	<summary>
+ Constructor. Carga en memoria el archivo de configuración pasado como parámetro.
+ </summary>
+	<param name="rutaXML">
+ Ruta completa del archivo XML de configuración. El archivo de configuración correcto es el que tiene 
+ el formato "nombre de aplicacion".exe.config que se encuentra generalmente en la carpeta bin del 
+ proyecto.
+ </param>
+</member><member name="M:Gedsa.Datos.GeneralSQL.clsAccesoDatosSQL.ponerCaracterEnBlanco(System.Object,System.String)">
+	<summary> 
+ponercaracterenblanco, comprueba si el parametro es DBnull caso que lo sea lo sustituye por "" o texto alternativo si se ha introducido  
+</summary>
+	<param name=" parametro ">parametro que comprobamos que no sea nulo</param>
+	<param name=" textoAlternativo "> texto para sustituir si parametro es nulo por defecto ""</param>
+	<returns>cadena para visualizar </returns>
+</member><member name="M:Gedsa.Datos.GeneralSQL.clsAccesoDatosSQL.ejecutaSQLEjecucion(System.String,System.String,System.Int32@)">
+	<summary>
+ Este metodo ejecuta una instruccion SQL que no devuelve filas (INSERT, UPDATE, DELETE...)
+ Realizado para casos de SQL complejos (INSERTS creados a partir de SELECTS de varias tablas)
+ para el pobrecito de J.Medrano, que le gusta complicarse la vida.
+ El procedimiento devuelve si lo ha ejecutado correctamente, y como parámetro
+ opcional devuelve el numero de filas aceptadas
+ </summary>
+	<param name="sql"></param>
+	<param name="cadenaConexion"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="F:Gedsa.panelImagen.var_modo">
+	<summary>
+ Existen diferentes modos en la imagen
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Gedsa.panelImagen.var_posicion_filtro">
+	<summary>
+ Esta variable sirve para controlar "posicion" del filtro cuando se está realizando,
+ ya que cuando se aplica un filtro la imagen
+ no puede volver al tamaño original, con lo que se ha de aplicar cada vez sobre
+ la original, siempre se reinicia a 0 cuando cambiamos el modo 
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Gedsa.panelImagen.asignaImagen(System.Drawing.Image@)">
+	<summary>
+ Creamos una copia de las imagenes para su tratamiento digital
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Gedsa.panelImagen.imagen_libera">
+	<summary>
+ Este método libera la imagen que tengamos cargada en el control
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Gedsa.Controles.Labels.ctrlLabelBase">
+	<summary>
+ Esta es la clase base de los controles de tipo label, de ella heredan todos los
+ controles de este mismo tipo o de funcionalidad similar.
+ Si el control heredado se crea dinámicamente (en ejecución), es necesario
+ definir sus nuevos atributos en el constructor.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Gedsa.Datos.Produccion.cadenaproduccion.clsAccesoDatosDocumento.ActualizaCamposDocumento(System.String,System.String,System.Data.DataTable)">
+	<summary>
+ Actualiza los campos pasados en formato datatable (con dos columnas, campo y valor) del ID de documento seleccionado
+ </summary>
+	<param name="ID"></param>
+	<param name="campos"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Gedsa.Datos.Produccion.cadenaproduccion.clsAccesoDatosDocumento.MarcarIndidenciaDocumento(System.Int32,System.String,System.Data.DataTable,System.String)">
+	<summary>
+ Se cambia el estado al documento seleccionado actualmente (poner por si seleccionan varios)
+ esta funcion actualiza en la tabla 
+ </summary>
+	<param name="tecla"></param>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

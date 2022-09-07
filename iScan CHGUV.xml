@@ -1,0 +1,418 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+iScanCHGUV
+</name>
+</assembly>
+<members>
+<member name="M:correccionDigi.clsDocumento.imagenes_comprueba(System.Data.DataTable@,System.String,System.Int32)">
+	<summary>
+ Funcion para comprobar si todas las imagenes existen 
+ </summary>
+	<param name="pagina"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.clsCursorRegistros.reinicio(System.Data.DataTable@,System.Int32)">
+	<summary>
+ Reinciamos las propiedades de la clase 
+ </summary>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.clsCursorRegistros.dispose">
+	<summary>
+ Destrucción del objeto
+ </summary>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.clsCursorRegistros.indice_busca(System.Data.DataRow@)">
+	<summary>
+ Devuelve a partir de un datarow el indice donde se encuentra el elemento 
+ En el caso de no encontrarlo, devuelve -1
+ </summary>
+	<param name="registro">Datarow de registro que queremos buscar</param>
+	<returns>Indice del elemento buscado, -1 si no se encuentra</returns>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.clsCursorRegistros.indice_situa(System.Int32,System.Windows.Forms.DataGridView@)">
+	<summary>
+ Situamos en la posicion pasada por parámetro el indice de posicion, devolvemos
+ false si no se encuentra en el rango
+ </summary>
+	<param name="posicion"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.clsCursorRegistros.indice_mover(System.Int32,System.Windows.Forms.DataGridView@)">
+	<summary>
+ Movimiento del indice del registro de los registros con incidencias
+ </summary>
+	<param name="direccion"></param>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.clsCursorRegistros.indice_campo(System.String)">
+	<summary>
+ Devuelve el valor (string) del campo del registro que esté seleccionado en la clase
+ </summary>
+	<param name="campo"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.clsCursorRegistros.registro_buscaID(System.String)">
+	<summary>
+ Devuelve un conjunto a partir de un ID
+ </summary>
+	<param name="ID"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:correccionDigi.clsCursorRegistros">
+	<summary>
+ Esta clase se utiliza para el movimiento de registros por la zona roja,
+ por defecto se le pasa por referencia la grid ¿? todavia por definir
+ </summary>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.frmIndizacionGeneral.inicializarListView">
+	<summary>
+ M?todo que nos permite inicializar los datos del listview
+ </summary>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.frmIndizacionGeneral.actualizarDatosListView">
+	<summary>
+ M?todo que permite actualizar los datos del listview con los cambios realizados en la
+ tabla documentos dependiendo de los datos de indizacion
+ </summary>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.frmIndizacionGeneral.bajarAbajo(System.Int32)">
+	<summary>
+ Método que nos permite acceder a la siguiente p?gina del listado
+ </summary>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.frmIndizacionGeneral.guardarRegistro(System.Int32)">
+	<summary>
+ M?todo que guarda cada registro como indizado si es correcto dentro de la tabla documentos
+ </summary>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.frmIndizacionGeneral.cargarDatosImagenActual(System.Int32)">
+	<summary>
+ M?todo que permite cargar los datos de indizacion de la imagen actual 
+ </summary>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.frmIndizacionGeneral.CtrlBotonGrande1_eClick(System.Object,System.EventArgs)">
+	<summary>
+ M?todo que permite cerrar el lote comprobando que todos los documentos eston indizados
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.frmIndizacionGeneral.IMGeditPrincipal_SelectionRectDrawn(System.Object,AxImgeditLibCtl._DImgEditEvents_SelectionRectDrawnEvent)">
+	<summary>
+ M?todo que permite al elegir un recuadro de la imagen visualizar la imagen pequenya m?s grande
+ en el visor de al lado
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.frmTratamientoImagen.fnc_imagen_trasforma">
+	<summary>
+ Devuelve la trasformacion de la imagen principal
+ </summary>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.frmCorreccionEpidemiologia.CtrlBotonMediano1_eClick(System.Object,System.EventArgs)">
+	<summary>
+ Método que permitirar cerrar el lote
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.frmCorreccionEpidemiologia.persistirLogModificacionesPAED(System.String,System.String,System.String,System.String)">
+	<summary>
+ PERSISTENCIA MODIFICACIONES CORRECCION INDIZACION 
+ </summary>
+	<remarks></remarks>
+</member><member name="T:correccionDigi.DatosPeticiones.PeticionesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:correccionDigi.DatosPeticiones.PeticionesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:correccionDigi.DatosPeticiones.PeticionesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:correccionDigi.DatosPeticiones">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="M:correccionDigi.clsItem.contenedor_mantenimiento_obtener(System.Windows.Forms.Control.ControlCollection@,System.String,System.String,System.String)">
+	<summary>
+ Obtención de los datos de las tablas
+ </summary>
+	<param name="contenedor"></param>
+	<param name="tabla"></param>
+	<param name="condicion"></param>
+	<remarks></remarks>
+</member><member name="T:correccionDigi.clsItem">
+	<summary>
+ Esta clase es utilizada para la generacion de formularios dinamica
+ </summary>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.frmInsercionDocumento.#ctor(correccionDigi.frmCorreccion@,correccionDigi.frmInsercionDocumento.tipoInsercion)">
+	<summary>
+ Cuando generamos un nuevo tipo de documentos debemos de pasarle en el constructor
+ el tipo de documento que queremos añadir
+ </summary>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.frmInsercionDocumento.fnc_cambiarTipo(correccionDigi.frmInsercionDocumento.tipoInsercion)">
+	<summary>
+ Metodo para cambiar el tipo de documento que deseamos insertar
+ </summary>
+	<param name="tipo">documento o caratula </param>
+	<remarks>Habilita los controles en funcion del tipo, y realiza comprobaciones como que la Historia 
+ este en el FIP o calcular el rango de documentos que tienen que copiar los datos del registro que 
+ estamos insertando para una caratula </remarks>
+</member><member name="M:correccionDigi.frmInsercionDocumento.fnc_comprobarNHC">
+	<summary>
+ fnc_comprobarNHC 
+ </summary>
+	<remarks>cuando cambiamos de foco buscamos en la tabla de de FIP los datosa del paciente
+ 
+ </remarks>
+</member><member name="M:correccionDigi.frmInsercionDocumento.cmdInstertarDocumento_Click(System.Object,System.EventArgs)">
+	<summary>
+Segun el tipo de formulario que sea se realizan unas opciones u otras, 
+Genero una consulta LINQ con todos los documentos del formulario anterior, a partir del seeleccionado
+organizados de MAYOR A MENOR, para que cuando renombremos , no se sobreescriban
+uno a otro
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.frmSeleccionProyecto.proyectos_refresca">
+	<summary>
+ Refresca el combobox de los proyectos
+ </summary>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.frmSeleccionProyecto.lotes_refresca">
+	<summary>
+ Esta funcion se encarga de actualizar el comboBox de los lotes, correspondientes
+ al proyecto seleccionado
+ </summary>
+	<remarks></remarks>
+</member><member name="T:correccionDigi.dts_cabecera.informeDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:correccionDigi.dts_cabecera.informeRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:correccionDigi.dts_cabecera.informeRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:correccionDigi.dts_cabecera">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="E:correccionDigi.frmVerificacion.cargadoImagen">
+	<summary>
+ Evento que indica la finalizacion de carga de Imagen en memoria del Thread
+ </summary>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.frmVerificacion.fnc_hiloFuncion">
+	<summary>
+ Cargamos en el hilo de ejecucion la carga de la imagen que luego, lanzaremos con el evento
+ </summary>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.frmVerificacion.fnc_imagenLibera(System.Drawing.Image@)">
+	<summary>
+ Metodo para realizar una copia de una imagen asociada a un fichero sin el enlace
+ </summary>
+	<param name="imagen"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.frmVerificacion.fnc_releaseTeclado">
+	<summary>
+ Cuando salta el evento de imagen cargada habilitamos el movimiento de documento
+ </summary>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.frmVerificacion.cambioModo(System.Int32)">
+	<summary>
+ Evento de cambio de modo. Se activa en el cambio de modo del visor de imagenes
+ retorna el foco a la grid de Documentos
+ </summary>
+	<param name="modo"></param>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.frmVerificacion.fnc_cargaImagen">
+	<summary>
+ Este metodo muestra en cuadro de visualizacion la imagen seleccionada
+ </summary>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.frmVerificacion.DataGridView1_RowPrePaint(System.Object,System.Windows.Forms.DataGridViewRowPrePaintEventArgs)">
+	<summary>
+ Metodo de repintado de la grid, para los colores de las casillas
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.frmVerificacion.imagen_rota">
+	<summary>
+ Funcion para rotar la imagen actual
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.frmVerificacion.moverRegistro(System.Int32)">
+	<summary>
+ Movimiento de registro en la grid
+ </summary>
+	<param name="direccion"></param>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.frmVerificacion.seleccionaRegistro(System.String)">
+	<summary>
+ Busqueda de un ID en la grid, se busca en la columna ID el parametro expecificado
+ y se devuelve el cell correspondiente para luego asignarlo al currentCell 
+ de la Grid y posicionarlo
+ 
+ </summary>
+	<param name="nombre"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.clsRegistrosRojos.reincio(System.Collections.Generic.List{System.Data.DataRow}@)">
+	<summary>
+ Reinciamos las propiedades de la clase 
+ </summary>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.clsRegistrosRojos.dispose">
+	<summary>
+ Destrucción del objeto
+ </summary>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.clsRegistrosRojos.indice_busca(System.Data.DataRow@)">
+	<summary>
+ Devuelve a partir de un datarow el indice donde se encuentra el elemento 
+ En el caso de no encontrarlo, devuelve -1
+ </summary>
+	<param name="registro">Datarow de registro que queremos buscar</param>
+	<returns>Indice del elemento buscado, -1 si no se encuentra</returns>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.clsRegistrosRojos.indice_situa(System.Int32)">
+	<summary>
+ Situamos en la posicion pasada por parámetro el indice de posicion, devolvemos
+ false si no se encuentra en el rango
+ </summary>
+	<param name="posicion"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.clsRegistrosRojos.indice_mover(System.Int32)">
+	<summary>
+ Movimiento del indice del registro de los registros con incidencias
+ </summary>
+	<param name="direccion"></param>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.clsRegistrosRojos.indice_campo(System.String)">
+	<summary>
+ Devuelve el valor (string) del campo del registro que esté seleccionado en la clase
+ </summary>
+	<param name="campo"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.clsRegistrosRojos.registro_buscaID(System.String)">
+	<summary>
+ Devuelve un conjunto a partir de un ID
+ </summary>
+	<param name="ID"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:correccionDigi.clsRegistrosRojos">
+	<summary>
+ Esta clase se utiliza para el movimiento de registros por la zona roja,
+ por defecto se le pasa por referencia la grid ¿? todavia por definir
+ </summary>
+	<remarks></remarks>
+</member><member name="P:correccionDigi.My.Resources.Resources.ResourceManager">
+	<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member><member name="P:correccionDigi.My.Resources.Resources.Culture">
+	<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso con establecimiento inflexible de tipos.
+</summary>
+</member><member name="T:correccionDigi.My.Resources.Resources">
+	<summary>
+  Clase de recurso con establecimiento inflexible de tipos, para buscar cadenas traducidas, etc.
+</summary>
+</member><member name="M:correccionDigi.clsEfectoImagen.#ctor">
+	<summary>
+ Contructor
+ </summary>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.clsEfectoImagen.reincia">
+	<summary>
+ Reinciamos todos los datos de la clase
+ </summary>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.clsEfectoImagen.dispose">
+	<summary>
+ Destruccion de la clase
+ </summary>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.clsEfectoImagen.modo_cambia(System.Int32)">
+	<summary>
+ Cambio de modo de la clase
+ </summary>
+	<param name="modo"></param>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.clsEfectoImagen.imagen_isModificada">
+	<summary>
+ Nos indica si existe un cambio en la imagen
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:correccionDigi.clsEfectoImagen">
+	<summary>
+ Clase para controlar el efecto que le vamos a dar a la imagen 
+ </summary>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.frmCorreccion.DataGridView1_RowPrePaint(System.Object,System.Windows.Forms.DataGridViewRowPrePaintEventArgs)">
+	<summary>
+ Metodo de repintado de la grid, para los colores de las casillas
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.frmCorreccion.proceso_arrancar(System.Diagnostics.Process@,System.Boolean,System.String,System.String)">
+	<summary>
+ Esta funcion arranca un ejecutable asociado a un proceso o lo para
+ </summary>
+	<param name="proceso"></param>
+	<param name="arrancado"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.frmCorreccion.moverRegistro(System.Int32)">
+	<summary>
+ Movimiento de registro en la grid, este se llama desde el grdDocumentos_keydown para desplazarnos 
+ hasta el siguiente registro 
+ </summary>
+	<param name="direccion">si direccion = 1 up si direccion = 0 down </param>
+	<remarks>
+	</remarks>
+</member><member name="M:correccionDigi.frmCorreccion.fnc_rellenaPanelDatosCodigoBarras">
+	<summary>
+ Rellenamos el registro que estamos visualizando
+ </summary>
+	<remarks></remarks>
+</member><member name="M:correccionDigi.frmCorreccion.fnc_imagenes_comprueba(System.Data.DataTable@,System.String,System.Int32)">
+	<summary>
+ Funcion para comprobar si todas las imagenes existen 
+ </summary>
+	<param name="pagina"></param>
+	<returns>i el numero de la pagina que no tiene documento
+ -2 con esto indicamos que no hay documentos 
+ -1 no se ha producido un error 
+ </returns>
+	<remarks></remarks>
+</member><member name="T:correccionDigi.clsImagenReferencia">
+	<summary>
+ Esta clase sirve para poder pasar imagenes por referencia a un formulario
+ </summary>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

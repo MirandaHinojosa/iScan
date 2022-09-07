@@ -1,0 +1,1 @@
+mogrify -compress group4 p:\1461\DIGI\146100071\Imagen\71\IML00004.tif
